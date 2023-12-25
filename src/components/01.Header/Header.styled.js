@@ -83,7 +83,6 @@ export const FlagImgStyled = styled(ImgStyled)`
 `;
 
 export const UlContainerStyled = styled.ul`
-  display: none;
   flex-direction: column;
   align-items: stretch;
   padding: 0 0 1rem 1rem;

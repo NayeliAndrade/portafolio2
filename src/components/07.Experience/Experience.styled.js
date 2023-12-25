@@ -4,6 +4,7 @@ import { colors, fontWeight, fonts } from "../../variables.styled";
 export const ContainerStyled = styled.div`
   overflow: hidden;
   margin: 1rem;
+  padding-bottom:6rem;
 `;
 export const ContainerTitleStyled = styled.div`
   padding-top: 3rem;

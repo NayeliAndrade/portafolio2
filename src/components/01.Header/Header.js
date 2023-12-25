@@ -20,6 +20,7 @@ const Header = () => {
 
   const newClass = () => {
     setActive(!active);
+
   };
 
   const flagM = "assets/Header/flagM.png";
