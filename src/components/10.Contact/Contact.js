@@ -12,6 +12,7 @@ import {
   ButtonStyled,
   FormStyled,
   MessageStyled,
+  BoxMessageStyled
 } from "./Contact.styled";
 import { useTranslation } from "react-i18next";
 
@@ -24,6 +25,9 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setSend(true);
+    setTimeout(() => {
+      setSend(false);
+    }, 3000);
 
     emailjs
       .sendForm(
@@ -94,11 +98,16 @@ const Contact = () => {
                 {t("contact.buttonSend")}
               </ButtonStyled>
             </FormStyled>
-            {send && <MessageStyled>
-              {t("contact.messageSend")}
-            </MessageStyled>}
+
           </ContainerInputsStyled>
         </ContainerBlackStyled>
+        {send &&
+          <BoxMessageStyled>
+            <MessageStyled>
+              {t("contact.messageSend")}
+            </MessageStyled>
+          </BoxMessageStyled>
+        }
       </ContainerImgBlueStyled>
     </ContainerImgLeavesStyled>
   );

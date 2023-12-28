@@ -30,11 +30,12 @@ export const ContainerBlackStyled = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 1280px;
-  padding: 6rem 1rem;
+  padding: 2rem 1rem;
   background-color: ${colors.fourth_black};
   margin: 1rem;
   @media (min-width: 700px) {
     flex-direction: row;
+    padding: 6rem 1rem;
   }
 `;
 
@@ -77,19 +78,34 @@ export const ContainerInputsStyled = styled.div`
 `;
 
 export const MessageStyled = styled.p`
-  padding: 1rem 0.5rem;
   color: ${colors.primary_white};
   font-size: 55px;
   font-family: ${fonts.secondary};
   font-weight: 900;
+  text-align:center;
 `;
+
+export const BoxMessageStyled = styled.div`
+  width: 320px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`
 
 export const FormStyled = styled.form`
   max-width: 500px;
   margin-top: 1.5rem;
 `;
 
-export const ButtonStyled = styled.form`
+export const ButtonStyled = styled.button`
   background-color: ${colors.secondary_Pink};
   font-family: ${fonts.secondary};
   border-radius: 0.5rem;
@@ -98,4 +114,6 @@ export const ButtonStyled = styled.form`
   width: 100%;
   margin-top: 0.5rem;
   text-align: center;
+  cursor:pointer;
+  border:none;
 `;
